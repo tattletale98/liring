@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -850,22 +851,46 @@
 
 
   <div id="waitlist">
-    <div class="brevo-wrap">
-      <div id="sib-form-container" class="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel" style="display:none;font-size:14px;text-align:center;font-family:inherit;color:#ffeded;background-color:rgba(255,100,100,0.15);border-radius:8px;border:1px solid rgba(255,100,100,0.3);max-width:480px;margin:0 auto 12px;padding:12px 20px;">
-          Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; font-family:inherit; color:#661d1d; background-color:#ffeded; border-radius:8px; border-color:#ff4949; max-width:480px; margin:0 auto 12px; padding:12px 20px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.</span>
         </div>
-        <div id="success-message" class="sib-form-message-panel" style="display:none;font-size:14px;text-align:center;font-family:inherit;color:#e7faf0;background-color:rgba(19,206,102,0.12);border-radius:8px;border:1px solid rgba(19,206,102,0.3);max-width:480px;margin:0 auto 12px;padding:12px 20px;">
-          Du bist auf der Liste. Wir melden uns, wenn Liring bereit ist.
+      </div>
+      <div></div>
+      <div id="success-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; font-family:inherit; color:#085229; background-color:#e7faf0; border-radius:8px; border-color:#13ce66; max-width:480px; margin:0 auto 12px; padding:12px 20px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Du bist auf der Liste. Wir melden uns, wenn Liring bereit ist.</span>
         </div>
-        <div id="sib-container" style="max-width:480px;margin:0 auto;">
-          <form id="sib-form" method="POST" action="https://fede09b1.sibforms.com/serve/MUIFAHTqR5tzrzpbamAa-bhYKp9k_J72XfJQWUpVaZwwF5NZScIjbq6loW2tANlpc0k61lsIpNVCyLsIJ3DsB36lglPP9S4byAeVpvfsd1ELCG4TG3GvVosewsdhd023t3n0WrYgOK0um_e_7H2yRWsyk7e_VBOfNh0UDsn6aLF2lpMtzNaU36KM6HBj_z5VDKCMceyyYt_OEaEHyw==" data-type="subscription" class="cta-form">
-            <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="deine@email.com" data-required="true" required style="padding:14px 20px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1rem;width:280px;outline:none;font-family:inherit;" />
-            <button type="submit" class="btn btn-primary" style="font-family:inherit;">Beim Launch benachrichtigen</button>
-            <input type="text" name="email_address_check" value="" style="display:none;">
-            <input type="hidden" name="locale" value="de">
-          </form>
-        </div>
+      </div>
+      <div></div>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:transparent; max-width:540px; border:none; margin:0 auto;">
+        <form id="sib-form" method="POST" action="https://fede09b1.sibforms.com/serve/MUIFAHTqR5tzrzpbamAa-bhYKp9k_J72XfJQWUpVaZwwF5NZScIjbq6loW2tANlpc0k61lsIpNVCyLsIJ3DsB36lglPP9S4byAeVpvfsd1ELCG4TG3GvVosewsdhd023t3n0WrYgOK0um_e_7H2yRWsyk7e_VBOfNh0UDsn6aLF2lpMtzNaU36KM6HBj_z5VDKCMceyyYt_OEaEHyw==" data-type="subscription" class="cta-form">
+          <div style="padding: 8px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="deine@email.com" data-required="true" required style="padding:14px 20px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1rem;width:280px;outline:none;font-family:inherit;" />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-size:14px;text-align:left;font-family:inherit;color:#661d1d;background-color:#ffeded;border-radius:8px;border-color:#ff4949;"></label>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block">
+              <button class="sib-form-block__button sib-form-block__button-with-loader btn btn-primary" form="sib-form" type="submit" style="font-family:inherit;font-size:1rem;border-radius:12px;padding:14px 28px;">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:1em;height:1em;margin-right:6px;vertical-align:middle;">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                Beim Launch benachrichtigen
+              </button>
+            </div>
+          </div>
+          <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
+          <input type="hidden" name="locale" value="de">
+        </form>
       </div>
     </div>
     <p class="cta-note">Kein Spam. Nur eine Nachricht wenn es soweit ist.</p>
@@ -1055,3 +1080,5 @@
 
 </body>
 </html>
+</html>
+
