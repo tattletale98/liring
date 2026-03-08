@@ -1011,11 +1011,11 @@
 <div class="final-cta">
   <h2>Schluss mit Raten.<br />Endlich richtig lüften.</h2>
   <p>Trag dich in die Warteliste ein und erfahre als Erster, wenn Liring verfügbar ist.</p>
-  <form class="cta-form" style="justify-content:center;" onsubmit="handleSubmit(event)">
+  <form class="cta-form" style="justify-content:center;" onsubmit="handleSubmit2(event)">
     <input type="email" placeholder="deine@email.de" required id="email-input-2" />
     <button type="submit" class="btn btn-primary">Zur Warteliste</button>
   </form>
-  <div class="success-msg" id="success-msg-2" style="margin-top:16px;display:inline-block;">
+  <div class="success-msg" id="success-msg-2" style="margin-top:16px;display:none;">
     Du bist auf der Liste. Wir melden uns, wenn Liring bereit ist.
   </div>
   <p class="cta-note" style="margin-top:14px;">Kein Spam. Nur eine Nachricht wenn es soweit ist.</p>
@@ -1029,28 +1029,21 @@
 </footer>
 
 <script>
-  // Simple waitlist form handler
-  function handleSubmit(e) {
+  const BREVO_URL = 'https://fede09b1.sibforms.com/serve/MUIFAHTqR5tzrzpbamAa-bhYKp9k_J72XfJQWUpVaZwwF5NZScIjbq6loW2tANlpc0k61lsIpNVCyLsIJ3DsB36lglPP9S4byAeVpvfsd1ELCG4TG3GvVosewsdhd023t3n0WrYgOK0um_e_7H2yRWsyk7e_VBOfNh0UDsn6aLF2lpMtzNaU36KM6HBj_z5VDKCMceyyYt_OEaEHyw==';
+
+  function handleSubmit2(e) {
     e.preventDefault();
     const form = e.target;
-    const input = form.querySelector('input[type="email"]');
-    const email = input.value;
-
-    // Store in localStorage as a simple validation demo
-    const waitlist = JSON.parse(localStorage.getItem('liring_waitlist') || '[]');
-    if (!waitlist.includes(email)) {
-      waitlist.push(email);
-      localStorage.setItem('liring_waitlist', JSON.stringify(waitlist));
-    }
-
-    // Show success
-    form.style.display = 'none';
-
-    // Show the sibling success message
-    const successId = form.closest('.final-cta') ? 'success-msg-2' : 'success-msg';
-    document.getElementById(successId).style.display = 'block';
-
-    console.log('Waitlist signup:', email, '— Total signups this session:', waitlist.length);
+    const email = document.getElementById('email-input-2').value;
+    const data = new FormData();
+    data.append('EMAIL', email);
+    data.append('email_address_check', '');
+    data.append('locale', 'de');
+    fetch(BREVO_URL, { method: 'POST', body: data, mode: 'no-cors' })
+      .finally(() => {
+        form.style.display = 'none';
+        document.getElementById('success-msg-2').style.display = 'block';
+      });
   }
 
   // Subtle parallax on device rings
@@ -1080,5 +1073,6 @@
 
 </body>
 </html>
-</html>
+
+
 
