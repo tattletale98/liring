@@ -1021,11 +1021,30 @@
   <p class="cta-note" style="margin-top:14px;">Kein Spam. Nur eine Nachricht wenn es soweit ist.</p>
 </div>
 
+<!-- IMPRESSUM -->
+<div id="impressum" style="display:none; max-width:600px; margin:0 auto; padding:60px 24px;">
+  <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:24px; letter-spacing:-0.02em;">Impressum</h2>
+  <p style="font-size:0.9rem; color:var(--muted); line-height:1.9;">
+    <strong style="color:var(--text);">Angaben gemäß § 5 ECG</strong><br><br>
+    Viktor Stojanovic<br>
+    Barichgasse 32<br>
+    1030 Wien<br>
+    Österreich<br><br>
+    <strong style="color:var(--text);">Kontakt</strong><br>
+    E-Mail: <a href="mailto:stojanovic.viktor@hotmail.com" style="color:var(--rose);">stojanovic.viktor@hotmail.com</a><br><br>
+    <strong style="color:var(--text);">Hinweis</strong><br>
+    Diese Website wird von einer Privatperson betrieben. Es besteht kein eingetragenes Gewerbe.<br><br>
+    <strong style="color:var(--text);">Haftungsausschluss</strong><br>
+    Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird keine Gewähr übernommen.
+  </p>
+  <button onclick="document.getElementById('impressum').style.display='none'; window.scrollTo(0,document.body.scrollHeight);" style="margin-top:24px; background:none; border:1px solid var(--border); color:var(--muted); padding:8px 20px; border-radius:8px; cursor:pointer; font-family:inherit; font-size:0.85rem;">Schließen</button>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="logo">li<span>ring</span></div>
   <span>© 2026 Liring. Alle Rechte vorbehalten.</span>
-  <span>Mit Liebe für heiße Sommer gemacht.</span>
+  <a href="#impressum" onclick="event.preventDefault(); document.getElementById('impressum').style.display='block'; document.getElementById('impressum').scrollIntoView({behavior:'smooth'});" style="color:var(--muted); font-size:0.85rem; text-decoration:none;">Impressum</a>
 </footer>
 
 <script>
@@ -1073,6 +1092,7 @@
 
 </body>
 </html>
+
 
 
 
